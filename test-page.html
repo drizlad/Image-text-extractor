@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for Image Text Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .large-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .instructions {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Image Text Extractor - Test Page</h1>
+    
+    <div class="instructions">
+        <h2>How to Test:</h2>
+        <ol>
+            <li>Click the extension icon in your Chrome toolbar</li>
+            <li>The page will dim and your cursor will change to a crosshair</li>
+            <li>Click and drag to select any text area below</li>
+            <li>Release to capture and extract the text</li>
+            <li>Review the extracted text in the popup</li>
+            <li>Click "Copy Text" to copy to clipboard</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Section 1: Simple Text</h2>
+        <p class="large-text">Hello World! This is a test.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Section 2: Multiple Lines</h2>
+        <p>Line 1: This is the first line of text.</p>
+        <p>Line 2: This is the second line of text.</p>
+        <p>Line 3: This is the third line of text.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Section 3: Mixed Content</h2>
+        <p class="large-text">Important Information</p>
+        <p>Email: test@example.com</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Address: 123 Main Street, City, State 12345</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Section 4: Numbers and Symbols</h2>
+        <p>Price: $99.99</p>
+        <p>Discount: 25% OFF</p>
+        <p>Code: ABC-123-XYZ</p>
+        <p>Math: 2 + 2 = 4</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Section 5: Long Paragraph</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <div class="instructions">
+        <h2>✅ Expected Behavior:</h2>
+        <ul>
+            <li>Page dims when extension is activated</li>
+            <li>Crosshair cursor appears</li>
+            <li>Green selection box follows your drag</li>
+            <li>Loading indicator shows during OCR processing</li>
+            <li>Popup appears near your selection with extracted text</li>
+            <li>Text can be edited in the textarea</li>
+            <li>"Copy Text" button copies to clipboard</li>
+            <li>Press ESC to cancel at any time</li>
+        </ul>
+    </div>
+</body>
+</html>

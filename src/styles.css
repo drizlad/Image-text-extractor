@@ -1,0 +1,240 @@
+/* Global styles for Image Text Extractor content script elements */
+
+/* Base overlay - transparent, just for cursor */
+#text-extractor-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: transparent !important;
+  z-index: 999999 !important;
+  cursor: crosshair !important;
+  user-select: none !important;
+  pointer-events: all !important;
+}
+
+/* Overlay panels that create the cutout effect (macOS style) */
+.text-extractor-overlay-panel {
+  position: fixed !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  z-index: 999999 !important;
+  pointer-events: none !important;
+  transition: all 0.05s linear !important;
+}
+
+/* Selection box - bright and clear (no background, just border) */
+#text-extractor-selection {
+  position: fixed !important;
+  border: 2px solid #4CAF50 !important;
+  background: transparent !important;
+  z-index: 1000000 !important;
+  pointer-events: none !important;
+  display: none !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Selection box corners for better visibility */
+#text-extractor-selection::before,
+#text-extractor-selection::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 3px solid #4CAF50 !important;
+  z-index: 1000001 !important;
+}
+
+/* Top-left corner */
+#text-extractor-selection::before {
+  top: -3px !important;
+  left: -3px !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+/* Bottom-right corner */
+#text-extractor-selection::after {
+  bottom: -3px !important;
+  right: -3px !important;
+  border-left: none !important;
+  border-top: none !important;
+}
+
+/* Selection dimensions display */
+#text-extractor-dimensions {
+  position: fixed !important;
+  background: rgba(76, 175, 80, 0.95) !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  z-index: 1000002 !important;
+  pointer-events: none !important;
+  display: none !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Instruction banner */
+#text-extractor-instruction {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 25px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  z-index: 1000003 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  animation: slideDown 0.3s ease-out !important;
+  pointer-events: none !important;
+}
+
+/* Loading indicator */
+#text-extractor-loading {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: white !important;
+  padding: 24px 32px !important;
+  border-radius: 12px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  z-index: 1000004 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Result popup */
+#text-extractor-result {
+  position: fixed !important;
+  width: 400px !important;
+  max-height: 300px !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1000005 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  overflow: hidden !important;
+  animation: popupAppear 0.3s ease-out !important;
+}
+
+#text-extractor-result textarea {
+  width: 100% !important;
+  height: 120px !important;
+  padding: 12px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  resize: vertical !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+#text-extractor-result textarea:focus {
+  border-color: #4CAF50 !important;
+}
+
+#text-extractor-result button {
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+#text-extractor-result button:hover {
+  transform: translateY(-1px) !important;
+}
+
+#text-extractor-result button:active {
+  transform: translateY(0) !important;
+}
+
+/* Error notifications */
+.text-extractor-error {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: #f44336 !important;
+  color: white !important;
+  padding: 12px 20px !important;
+  border-radius: 6px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  z-index: 1000006 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  animation: slideInRight 0.3s ease-out !important;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ensure crosshair cursor throughout capture mode */
+body.text-extractor-active,
+body.text-extractor-active * {
+  cursor: crosshair !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  #text-extractor-result {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    left: 5vw !important;
+    right: 5vw !important;
+  }
+  
+  #text-extractor-instruction {
+    left: 10px !important;
+    right: 10px !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+}

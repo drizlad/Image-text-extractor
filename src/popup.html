@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Text Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <div class="logo">
+        <span class="icon">🔍</span>
+        <h1>Text Extractor</h1>
+      </div>
+      <div class="status" id="status">
+        <span class="status-indicator" id="statusIndicator"></span>
+        <span class="status-text" id="statusText">Ready</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="instructions" id="instructions">
+        <p>Click the button below to activate text extraction mode, then click on any image on the webpage to extract its text.</p>
+      </div>
+
+      <div class="controls">
+        <button id="toggleButton" class="primary-button">
+          <span class="button-icon">▶️</span>
+          <span class="button-text">Start Extraction</span>
+        </button>
+      </div>
+
+      <div class="settings" id="settings">
+        <h3>Settings</h3>
+        <div class="setting-item">
+          <label for="language">OCR Language:</label>
+          <select id="language">
+            <option value="eng" selected>English</option>
+            <!-- Future: Add more languages -->
+          </select>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat-item">
+          <span class="stat-label">Extractions Today:</span>
+          <span class="stat-value" id="todayCount">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Total Extractions:</span>
+          <span class="stat-value" id="totalCount">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="links">
+        <a href="#" id="helpLink">Help</a>
+        <a href="#" id="feedbackLink">Feedback</a>
+      </div>
+      <div class="version">v1.0.0</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
