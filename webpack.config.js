@@ -19,7 +19,10 @@ module.exports = {
         { from: 'src/icons', to: 'icons' },
         // Copy Tesseract.js worker files
         { from: 'node_modules/tesseract.js/dist/worker.min.js', to: 'worker.min.js' },
-        { from: 'node_modules/tesseract.js/dist/worker.min.js.map', to: 'worker.min.js.map' }
+        { from: 'node_modules/tesseract.js/dist/worker.min.js.map', to: 'worker.min.js.map' },
+        // Copy Tesseract.js core WASM files
+        { from: 'node_modules/tesseract.js-core/tesseract-core.wasm.js', to: 'tesseract-core.wasm.js' },
+        { from: 'node_modules/tesseract.js-core/tesseract-core-simd.wasm.js', to: 'tesseract-core-simd.wasm.js' }
       ]
     })
   ],

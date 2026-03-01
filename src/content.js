@@ -447,8 +447,12 @@ class ScreenCaptureExtractor {
       this.popupX = popupX;
       this.popupY = popupY;
       
-      // Create Tesseract worker with proper configuration
+      // Create Tesseract worker with local paths (required for Chrome extensions)
+      const workerPath = chrome.runtime.getURL('worker.min.js');
+      const corePath = chrome.runtime.getURL('tesseract-core-simd.wasm.js');
       const worker = await Tesseract.createWorker({
+        workerPath: workerPath,
+        corePath: corePath,
         logger: (m) => {
           console.log('Tesseract:', m);
           if (m.status === 'recognizing text') {

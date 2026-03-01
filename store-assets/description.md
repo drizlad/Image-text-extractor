@@ -1,50 +1,38 @@
 # Chrome Web Store Listing
 
 ## Title
-Image Text Extractor - OCR for Web Images
+Image Text Extractor - OCR Screen Capture
 
-## Short Description
-Extract text from any image on the web with one click. Copy text from screenshots, memes, and graphics instantly.
+## Short Description (132 chars max)
+Extract text from any screen area with one click. Select, capture, and copy text from images instantly using OCR.
 
 ## Detailed Description
 
-**Extract text from images instantly with Image Text Extractor!**
+**Extract text from any part of your screen instantly!**
 
-Turn any image on the web into copyable text with just one click. Perfect for capturing text from screenshots, social media posts, infographics, memes, and any other image-based content you encounter while browsing.
+Image Text Extractor lets you select any area on your screen and extract the text using advanced OCR technology. Perfect for copying text from images, screenshots, videos, or any visual content.
 
-**🔍 Key Features:**
-• One-click text extraction from any image
-• Works on all websites - no restrictions
+**Key Features:**
+• Select any screen area to extract text
 • Fast, accurate OCR processing
-• Copy extracted text directly to clipboard
-• Visual feedback and easy-to-use interface
+• One-click copy to clipboard
+• Works on all websites
 • Complete privacy - all processing happens locally
+• No account required
 
-**⚡ How it works:**
-1. Click the extension icon to activate extraction mode
-2. Click on any image to extract its text
-3. Review and edit the extracted text
-4. Copy to clipboard with one click
+**How to Use:**
+1. Click the extension icon
+2. Click and drag to select an area
+3. View the extracted text
+4. Copy to clipboard
 
-**🔒 Privacy & Security:**
-• No data collection or tracking
-• All OCR processing happens in your browser
-• No external servers or API calls
-• Minimal permissions required
+**Privacy & Security:**
+• No data collection
+• No external servers
+• All OCR processing in your browser
+• Minimal permissions
 
-**💡 Perfect for:**
-• Students capturing text from educational content
-• Researchers extracting quotes and information
-• Social media users copying text from posts
-• Anyone who needs to digitize text from images
-
-**Technical Details:**
-• Uses advanced Tesseract.js OCR technology
-• Works offline once installed
-• Supports Chrome 88+ and Chromium browsers
-• Lightweight and fast performance
-
-Transform your browsing experience and never manually type text from images again!
+Built with Tesseract.js OCR technology.
 
 ## Category
 Productivity
@@ -52,21 +40,10 @@ Productivity
 ## Language
 English
 
-## Keywords
-ocr, text extraction, image to text, screenshot text, copy text, productivity, accessibility, tesseract
-
 ## Screenshots Needed
-1. Extension popup interface
-2. Extraction mode active on a webpage
-3. Text extraction popup with results
-4. Before/after comparison of image and extracted text
-5. Extension working on different types of images
+1. Selection mode active on a webpage
+2. Text extraction result popup
+3. Before/after showing image and extracted text
 
 ## Privacy Policy
-This extension does not collect, store, or transmit any user data. All OCR processing is performed locally in the user's browser. No personal information is accessed or shared.
-
-## Support Email
-support@imageextractor.com (placeholder)
-
-## Website
-https://github.com/yourusername/image-text-extractor (placeholder)
+This extension does not collect, store, or transmit any user data. All OCR processing is performed locally in the user's browser.
